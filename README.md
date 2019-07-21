@@ -1,6 +1,6 @@
 # competition-experience
 
-Good luck!
+Good luck! Gonna win!
 
 ---
 # Printing a docker in Cpp smartly
