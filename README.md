@@ -1,4 +1,4 @@
-# competition-experience
+# competition-tricks
 
 Good luck! Gonna win!
 
