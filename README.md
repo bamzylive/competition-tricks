@@ -3,7 +3,7 @@
 Good luck! Gonna win!
 
 ---
-# Printing a docker in Cpp smartly
+# Printing a vector in Cpp smartly
 ```cpp
 template<typename T>
 ostream& operator<< (ostream& out, const vector<T>& v) {
