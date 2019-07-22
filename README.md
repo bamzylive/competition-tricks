@@ -4,7 +4,7 @@ Good luck! Gonna win!
 
 ---
 # Printing a vector in Cpp smartly
-Tested for 1,2,3-d vectors
+Tested for 1,2,3-d vectors.
 ```cpp
 template<typename T>
 ostream& operator<< (ostream& out, const vector<T>& vec) {
@@ -21,7 +21,7 @@ ostream& operator<< (ostream& out, const vector<T>& vec) {
 ```
 ---
 # Similarly, reading a vector
-Tested only for 1-d vector
+Tested only for 1-d vector. Each line seen as source of the 1-d vector.
 ```cpp
 template<typename T>
 istream& operator>> (istream& in, vector<T>& vec) {
