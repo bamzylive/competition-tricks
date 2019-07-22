@@ -29,8 +29,12 @@ istream& operator>> (istream& in, vector<T>& vec) {
     while (true) {
         in >> item;
         vec.push_back(item);
-        if (in.eof() || in.get() != ' ')
+        while (!in.eof() && in.peek() == ' ') {
+            in.get();
+        }
+        if (in.eof() || in.peek() == '\n') {
             break;
+        }
     }
     return in;
 }
