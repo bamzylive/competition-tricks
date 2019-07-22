@@ -33,3 +33,30 @@ istream& operator>> (istream& in, vector<T>& vec) {
     return in;
 }
 ```
+---
+# Make local test
+```cpp
+#ifdef LOCAL
+
+#define cin testIStream
+
+string test;
+istringstream testIStream;
+
+void genTest() {
+    // come on
+}
+#endif
+```
+```cpp
+// in main func 
+int main() {
+    // ...
+    
+    #ifdef LOCAL
+    genTest();
+    testIStream = istringstream(test);
+    #endif
+    
+    // ...
+}
