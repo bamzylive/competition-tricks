@@ -71,17 +71,16 @@ int main() {
 # Using closure to encapsulate local debugging
 Helpful for avoiding use of global variables or parameters passing, the former dangerous and the latter clumsy.
 ```cpp
-auto genLocalDebug = []() {
-    return [&](auto x) { 
-        x += 1;
-        cout << x << endl;
-    };
-};
-
 type funcMaybeWithBugs() {
-    int n = 3;
+    int n = 2;
     // ...
-    auto localDebug = genLocalDebug();
-    localDebug(3);
+    auto localDebug = [=]() {
+        cout << n << endl;
+        // ...
+    };
+    // ...
+    localDebug();
+    // ...
+    localDebug();
 }
 ```
