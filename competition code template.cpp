@@ -21,7 +21,7 @@ istream& operator>> (istream& in, vector<T>& vec) {
     while (true) {
         in >> item;
         vec.push_back(item);
-        while (!in.eof() && in.peek() == ' ') {
+        while (!in.eof() && (in.peek() == ' ' || in.peek() == '\t')) {
             in.get();
         }
         if (in.eof() || in.peek() == '\n') {
@@ -31,7 +31,7 @@ istream& operator>> (istream& in, vector<T>& vec) {
     return in;
 }
 
-#ifdef LOCAL
+#ifdef QUICKTEST
 
 #define cin testIStream
 
@@ -52,7 +52,7 @@ ooooooooooooo oooooooooooo  .oooooo..o ooooooooooooo     .oooooo..o       .o.   
 #endif
 
 int main() {
-    #ifdef LOCAL
+    #ifdef QUICKTEST
     genTest();
     testIStream = istringstream(test);
     #endif
