@@ -88,5 +88,8 @@ type funcMaybeWithBugs() {
 # Dot at
 Safe than brackets
 ```bash
-cat xxx.cpp | perl -pe 's|\[(.*?)]|.at(\1)|g' > xxx.tmp.cpp
+cat xxx.cpp | perl -pe 's|\[([^\[]*?)]|.at(\1)|g' > xxx.tmp.cpp && mv xxx.tmp.cpp xxx.cpp
+```
+```bash
+cat xxx.cpp | perl -pe 's|\.at\(([^\(]*?)\)|\[\1]|g' > xxx.rev.cpp && mv xxx.rev.cpp xxx.cpp
 ```
