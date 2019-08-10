@@ -1,6 +1,8 @@
 # competition-tricks
 
-Good luck! Gonna win!
+Some code templates for competition.
+
+Ideal: an algorithm is best implemented as an general interface, like a polymorphic template or so.
 
 ---
 # Printing a vector in Cpp smartly
