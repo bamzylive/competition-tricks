@@ -84,3 +84,8 @@ type funcMaybeWithBugs() {
     localDebug();
 }
 ```
+---
+# Dot at
+```bash
+cat xxx.cpp | sed 's/\[\(.*\)].at(\1)/g' > xxx.tmp.cpp
+```
