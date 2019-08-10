@@ -68,7 +68,7 @@ int main() {
 }
 ```
 ---
-# Using closure to encapsulate local debugging
+# Closure for encapsulate local debugging
 Helpful for avoiding use of global variables or parameters passing, the former dangerous and the latter clumsy.
 ```cpp
 type funcMaybeWithBugs() {
